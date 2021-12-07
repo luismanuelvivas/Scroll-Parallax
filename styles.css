@@ -28,6 +28,16 @@ header{
     z-index: 1000;
 }
 
+header::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100px;
+    background:linear-gradient(to bottom,rgba(0,0,0) , rgba(0,0,0,0.1));
+}
+
 header .logo{
     color:white;
     font-weight:700;
@@ -35,12 +45,14 @@ header .logo{
     font-size:2em;
     text-transform:uppercase;
     letter-spacing: 2px;
+    z-index:1;
 }
 
 header ul{
     display:flex;
     justify-content: center;
     align-items:center;
+    z-index:1;
 }
 
 header ul li{
@@ -52,6 +64,7 @@ header ul li a{
     text-decoration: none;
     padding:6px 15px;
     color:white;
+    transition:all 0.5s;
 }
 
 header ul li a:hover, .active{
@@ -81,8 +94,6 @@ section::before{
     height:100px;
     background:linear-gradient(to top, #2b1055, transparent);
     z-index:1000;
-
-
 }
 
 section img{
@@ -121,6 +132,13 @@ section img#mountains_front{
     font-size:1.5em;
     z-index:9;
     transform:translateY(100px);
+    transition:all 0.5s;
+}
+
+#btn:hover{
+    background: rgba(43, 16, 85,0.7);
+    color:white;
+    border:2px solid white;
 }
 
 .sec{
