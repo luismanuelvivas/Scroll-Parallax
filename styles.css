@@ -5,11 +5,13 @@
     padding:0;
     box-sizing:border-box;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
     min-height:100vh;
-    background:linear-gradient(#2b1055,#7597de)
+    overflow-x:hidden;
+    background:linear-gradient(#2b1055,#7597de);
 }
 
 /*HEADER*/
@@ -68,6 +70,7 @@ section{
     display:flex;
     justify-content: center;
     align-items: center;
+    overflow:hidden;
 }
 
 section::before{
@@ -102,9 +105,10 @@ section img#mountains_front{
 
 #text{
     position:absolute;
+    right: -350px;
     color:white;
     white-space: nowrap;
-    font-size: 10.5vh;
+    font-size: 9.5vh;
     z-index:9;
 }
 
